@@ -1,0 +1,48 @@
+#app, #app2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.main_block {
+    display: flex;
+    gap: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+/*Block below*/
+.one_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.input_one {
+    margin: 10px auto;
+}

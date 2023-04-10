@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue.js-2.0 dynamic style</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <div id="app">
+                <h1>Dynamic class</h1>
+        <div class="main_block">
+            <div
+                    @click="attachedClass = !attachedClass"
+                    :class=divClass
+                    class="box">
+            </div>
+
+            <div
+                    :class="{yellow : attachedClass }"
+                    class="box">
+            </div>
+
+            <div
+                    :class="[color, {yellow : attachedClass }]"
+                    class="box">
+            </div>
+        </div>
+
+        <div>
+            <hr>
+            <input type="text" v-model="color" placeholder="Third block">
+            <hr>
+        </div>
+
+        1.Click first block <br>
+        2.write color: green in input
+    </div>
+
+    <div id="app2">
+        <div class="one_block">
+            <h1>Dynamic style</h1>
+            <div
+                    :style=customStyle
+                    class="box_1">
+            </div>
+
+
+            <label>
+                write: Color-
+                <input type="text" v-model="color" class="input_one">
+            </label>
+
+            <label>
+                write: Height-
+                <input type="number" v-model="height">
+            </label>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
